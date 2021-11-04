@@ -1,0 +1,80 @@
+[
+    {
+        "id": 1,
+        "position": 1,
+        "startAt": "02-02-2017",
+        "endAt": "12-24-2019",
+        "companyName": "CamelBack Enterprises",
+        "website": "http://kavishkagear.com/",
+        "logo": "../../assets/template/experience/logo/plague.png",
+        "internationalizations": [
+            {
+                "language": "sn",
+                "city": "Uberaba",
+                "country": "Brasil",
+                "role": "Estágio Webmaster",
+                "description": "A <b>Fácil Tecnologias LTDA</b> é uma empresa focada em soluções para educação, seu principal produto é um conjunto de soluções para estudos na obtenção da <i>carteira nacional de habilitação (CNH)</i>, entre elas, multimídias, aplicativos on-line, aplicativos móveis, livros, entre outros. <br><br>Na <i>Fácil Tecnologias LTDA</i>, entrei em contato com desenvolvedores seniores, aprendendo as melhores práticas, padrões e como debater idéias e oferecer soluções diversas para o mesmo problema. Foi o ponto de partida, uma oportunidade única de transformar o conhecimento teórico em soluções concretas que estavam sendo usadas por centenas de pessoas todos os dias."
+            },
+            {
+                "language": "en",
+                "city": "Colombo",
+                "country": "Sri Lanka",
+                "role": "Web Developer",
+                "description": "<b>CamelBack Enterprises</b> is a company focused on distributing army equipments such as Hydration Packs , Camelback Waterbottles ,Bag , Hydration Vitamins and many more accessories  since 2007, and large scale distributers to the army and to Camelback enthusiats marketing products on a global scale equvalently among countries with distribution agents, providing them with a ecommerce website to develop and maintain to market thier products online to enhance B2C platform activity <br><br> We are dedicated to offer the best products and services covering virtually all aspects of Military, Personnel Protection and other verticals we represent. This has enabled us to reach the pinnacle of success and focus on providing superior Defense requirements to our clients.The brands exclusively represented by Kavishka Enterprises (Pvt) Ltd cover the entire scope of Military & Personnel Protection requirements."
+            }
+        ],
+        "technologies": [
+            "HTML", "CSS", "CSS3", "Javascript", "Wordpress", "SQL", "MySQL", "Windows"
+        ],
+       
+        
+        "backgroundUrl": "../../assets/template/experience/army.jpg"
+    },
+    {
+        "id": 2,
+        "position": 2,
+        "startAt": "03-03-2021",
+        "endAt": "",
+        "companyName": "Leo Club of SLIIT",
+        "website": "https://sliitleo.org/",
+        "logo": "../../assets/template/experience/logo/lcsliit.png",
+        "internationalizations": [
+            {
+                "language": "sn",
+                "city": "Colombo",
+                "country": "Sri Lanka",
+                "role": "Desenvolvedor Full-stack",
+                "description": "A <b>E-tática</b> é uma agência especializada em soluções para <i>comércio eletrônico</i>, marketing digital e identidade visual desde 2008, trabalhando com grandes, pequenos e médios negócios, oferecendo para seus clientes, o know-how na integração de seus negócios com <i>Sistemas integrados de gestão empresarial (ERP)</i> e <i>APIs de terceiros</i>, tais como <i>provedores de pagamento personalizados</i>, fazendo a integração do gerenciamento interno da plataforma on-line e da loja física, sendo certificada pelas principais plataformas do mercado.<br><br>Na <i>E-tática </i>, trabalhei para desenvolver soluções personalizadas para clientes do atacado e varejo, valorizando a qualidade e a continuidade dos projetos a médio e longo prazo."
+            },
+            {
+                "language": "en",
+                "city": "Colombo",
+                "country": "Sri Lanka",
+                "role": "Wordpress Developer",
+                "description": "<b>Leo Club of SLIIT</b> is a non-profit organization in Sri Lankan Institute of Information Technology  Malabe , Serving the community and the country by initiating projects for the betterment of the organization , In order to improve country recogization and to showcase the work of the club is developed website to maintain up to date details based on which Leoistic year to keep  on contributing to the society as proud Leo , <br><br>Wordpress is mostly used to handle and maintain club content for the relevant year "
+            }
+        ],
+        "technologies": [
+           "HTML", "CSS", "CSS3", "Javascript", "Wordpress", "SSH", "SSL", "Linux", "Adobe"
+        ],
+        "medias": [
+            {
+                "icon": "linkedin",
+                "title": "LinkedIn LC/SLIIT",
+                "http": "https://www.linkedin.com/company/sliitleo/mycompany/?viewAsMember=true"
+            },
+            {
+                "icon": "facebook",
+                "title": "Facebook LC/SLIIT",
+                "http": "https://www.facebook.com/SLIITLeo/"
+            },
+            {
+                "icon": "instagram",
+                "title": "Instagram LC/SLIIT",
+                "http": "https://www.instagram.com/leoclubofsliit/"
+            }
+        ],
+        "backgroundUrl": "../../assets/template/experience/leoclub.jpeg"
+    }
+   
+]

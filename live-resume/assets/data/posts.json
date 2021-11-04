@@ -1,0 +1,88 @@
+[
+    {
+        "thumbnail": "../../assets/posts/zoomelaka.png",
+        "http": "https://github.com/ChathushkaRodrigo/ZooMelaka-Management-System",
+        "date": "06-10-2021",
+        "internationalizations": [
+            {
+                "language": "en",
+                "title": "Zoo Melaka Management System",
+                "description": " <b> Melaka Zoo </b> was in need of a <b> Management System </b> to procure thier day to day work to be done on an online platform where visitors and working staff can engage in activities in an online portal based manner. Developed using <b> M.E.R.N </b> stack technology <br><br> <b>MERN JIRA GITHUB </b> "
+            },
+            {
+                "language": "sn",
+                "title": "A fórmula de matriz 2D anti-deslocamento.",
+                "description": "Você já pensou na <b>relação matemática</b> entre as<i> colunas</i> e as <i>linhas</i> de uma matriz bidimensional <i>(matriz 2d)</i>? Essa estrutura de dados oculta uma <b>fórmula de localização de dados</b> que me ajudou a evitar a <i>complexidade de tempo de O(n²)</i>, que é um cenário péssimo, transformando-a em uma <i>complexidade do tempo constante - O(1)</i>. Uma explicação completa, com casos de teste reais e testes de unidade, está esperando por você."
+            }
+        ]
+    },
+    {
+        "thumbnail": "../../assets/posts/spinner.png",
+        "http": "https://github.com/ChathushkaRodrigo/Spinner-Bike-Managment-1",
+        "date": "05-1-2021",
+        "internationalizations": [
+            {
+                "language": "en",
+                "title": "Spinner Cycling Android Mobile App",
+                "description": "Spinner Bike shop was in need of an application to market thier brand name and to gain more customers on a mobile platform.Android app mostly interacts with Cyclers & Staff with 70% of the physical work done is integrated to this mobile app.Implemented in <b> Android-Java </b> "
+            },
+            {
+                "language": "sn",
+                "title": "Em 2019, saia do desemprego! Seja você um Web Developer.",
+                "description": "Lá estavam no mural, inúmeras vagas para desenvolvedor web. E ao mesmo tempo, haviam <b>12,7 Milhões de compatriotas desempregados</b> e tais vagas em aberto ficaram matutando em minha cabeça. De volta à minha casa, me recordo de um curso gratuito, disponibilizado pelo renomado <i>Bob Tabor (Senior Program Manager na Microsoft)</i>, presente na Microsoft Virtual Academy."
+            }
+        ]
+    },
+    {
+        "thumbnail": "../../assets/posts/onlinehelpdesk.png",
+        "http": "https://github.com/ChathushkaRodrigo/OnlineHelpDesk",
+        "date": "02-12-2021",
+        "internationalizations": [
+            {
+                "language": "en",
+                "title": "Online Help Desk ",
+                "description": "Developed using <b>Java Object Oriented </b> approach with  <b>M.V.C</b> architecture . Purpose of this application is to provide students and lecturers with information stored in MySQL database .To store student feedbacks ,lecturer forum details, user profile details raising issue tickets"
+            },
+            {
+                "language": "sn",
+                "title": "Navegação por Item no Mapa para Android - <i>Componente de código aberto</i>.",
+                "description": "Para uma ótima experiência do usuário, o uso de mapas junto com a lista ordenada é usado com muita frequência em aplicativos móveis. Este artigo apresenta um aplicativo de código aberto para Android que fornece um componente totalmente funcional."
+            }
+        ]
+    },
+    {
+        "thumbnail": "../../assets/posts/kurumba.png",
+        "http": "https://github.com/ChathushkaRodrigo/Kurumba-Jobs",
+        "date": "05-05-2020",
+        "internationalizations": [
+            {
+                "language": "en",
+                "title": "Kurumba Online Job Portal",
+                "description": "Kurumba Job portal is developed using <b>HTML, CSS, Javascript</b> and <b>PHP</b> to communicate with the backend where data is stored in <b> MySQL</b> database.Web application provides Job Seekers and Employers/Companies to post job vacancies and to apply for them vacancies in an online portal"
+            },
+            {
+                "language": "sn",
+                "title": "Pesquisa por distância geográfica com MySQL e PHP.",
+                "description": "Atualmente, a <b>geolocalização</b> é essencial para a maioria das atividades diárias básicas. Quem nunca perguntou ao Google onde está o mercado mais próximo? Neste artigo, mostro um exemplo prático de como criar uma <i>consulta SQL</i> a qual faz uma pesquisa geolocalizada com base em um raio de abrangência e um ponto geográfico fixo."
+            }
+        ]
+    },
+    {
+        "thumbnail": "../../assets/posts/missingwallet.png",
+        "http": "https://github.com/ChathushkaRodrigo/DrunkDude",
+        "date": "12-20-2020",
+        "internationalizations": [
+            {
+                "language": "en",
+                "title": "Missing Wallet Unity 2D Game",
+                "description": "Missing Wallet is an  <b>Unity</b> developed application where a player uses a drone to find his missing wallets which are scattered in an area to get all the points.View and controllers are devlopeed using<b> C#</b>.<b>2D</b>game was an outcome of <b>Global Game Jam 2021 </b>"
+            },
+            {
+                "language": "sn",
+                "title": "Envio de e-mail autenticado em PHP.",
+                "description": "Com a aplicação da política de segurança de email na <i>Web 2.0</i>, surgiu a necessidade de tomar medidas que dificultassem a prática do <i>spamming</i>, entre as medidas adotadas, está o uso de e-mail autenticado, o que significa que, para cada e-mail enviado, teríamos a <i>assinatura</i> do host que o enviou, assim, haveria maior controle sobre quem, eventualmente, praticasse o spam. Neste artigo, mostrarei como enviar o email de autenticação, aumentando as chances de seu email ser lido pelo usuário de destino."
+            }
+        ]
+    }
+    
+]
