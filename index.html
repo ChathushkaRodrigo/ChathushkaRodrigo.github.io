@@ -1,21 +1,971 @@
-
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="/lovable-uploads/57b2f5f2-1a90-464c-9be2-70c61b8385dd.png" type="image/png">
-    <title>Chathushka Rodrigo</title>
-    <meta name="description" content="Kubectl apply -f pure-awesomeness.yaml -n earth" />
-    <meta name="author" content="Chathushka Rodrigo" />
-    <meta property="og:image" content="/og-image.png" />
-    <script type="module" crossorigin src="/assets/index-ykvXjYzG.js"></script>
-    <link rel="stylesheet" crossorigin href="/assets/index-_sL7PGS8.css">
-  </head>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chathushka Rodrigo | DevOps Engineer & iOS Developer</title>
+  <meta name="description" content="DevOps Engineer L3 & macOS/iOS Developer specializing in AWS, Kubernetes, CI/CD pipelines, Swift, and cloud infrastructure." />
+  <meta name="author" content="Chathushka Rodrigo" />
+  <meta property="og:title" content="Chathushka Rodrigo | DevOps Engineer & iOS Developer" />
+  <meta property="og:description" content="DevOps Engineer L3 & macOS/iOS Developer specializing in AWS, Kubernetes, CI/CD, Swift, and cloud infrastructure." />
+  <meta property="og:image" content="/og-image.png" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="/lovable-uploads/57b2f5f2-1a90-464c-9be2-70c61b8385dd.png" type="image/png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            mono: ['"JetBrains Mono"', 'Fira Code', 'monospace'],
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+          },
+          colors: {
+            dark: { 50: '#e6e6e6', 100: '#b3b3b3', 200: '#808080', 300: '#4d4d4d', 400: '#333333', 500: '#1a1a1a', 600: '#141414', 700: '#0f0f0f', 800: '#0a0a0a', 900: '#050505' },
+            accent: { DEFAULT: '#3b82f6', light: '#60a5fa', dark: '#2563eb' },
+            glow: '#3b82f6',
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Devicon for tool logos -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/devicon.min.css" />
+  <style>
+    /* Theme variables */
+    :root {
+      --bg: #050505; --bg-card: rgba(15,15,15,0.5); --bg-terminal: #0f0f0f; --bg-terminal-header: #141414;
+      --text: #e6e6e6; --text-muted: #b3b3b3; --text-dim: #808080; --text-faint: #4d4d4d;
+      --border: rgba(59, 130, 246, 0.15); --border-hover: rgba(59, 130, 246, 0.4);
+      --nav-bg: rgba(5,5,5,0.8); --nav-border: rgba(51,51,51,0.3);
+      --tag-bg: #1a1a1a; --tag-border: #4d4d4d;
+      --grid-line: rgba(59, 130, 246, 0.03);
+      --logo-filter: grayscale(1) brightness(0.6); --logo-hover: grayscale(0) brightness(1);
+      --scrollbar-track: #0a0a0a; --scrollbar-thumb: #333;
+      --green: #4ade80; --particle-color: rgba(59, 130, 246, 0.3);
+    }
+    html.light {
+      --bg: #f8fafc; --bg-card: rgba(255,255,255,0.7); --bg-terminal: #ffffff; --bg-terminal-header: #f1f5f9;
+      --text: #1e293b; --text-muted: #475569; --text-dim: #64748b; --text-faint: #94a3b8;
+      --border: rgba(59, 130, 246, 0.2); --border-hover: rgba(59, 130, 246, 0.5);
+      --nav-bg: rgba(248,250,252,0.85); --nav-border: rgba(203,213,225,0.5);
+      --tag-bg: #e2e8f0; --tag-border: #cbd5e1;
+      --grid-line: rgba(59, 130, 246, 0.06);
+      --logo-filter: grayscale(1) brightness(0.8); --logo-hover: grayscale(0) brightness(1);
+      --scrollbar-track: #f1f5f9; --scrollbar-thumb: #cbd5e1;
+      --green: #16a34a; --particle-color: rgba(59, 130, 246, 0.15);
+    }
+    body { background: var(--bg); color: var(--text); font-family: 'Inter', system-ui, sans-serif; transition: background 0.3s, color 0.3s; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: var(--scrollbar-track); }
+    ::-webkit-scrollbar-thumb { background: var(--scrollbar-thumb); border-radius: 3px; }
+    ::-webkit-scrollbar-thumb:hover { background: #555; }
+    .cursor { display: inline-flex; align-items: center; }
+    .cursor::after {
+      content: '\eabd';
+      font-family: 'devicon';
+      display: inline-block;
+      font-size: 1.3em;
+      color: #326CE5;
+      margin-left: 6px;
+      animation: k8s-spin 3s linear infinite;
+    }
+    @keyframes k8s-spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+    @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
+    .fade-up { opacity: 0; transform: translateY(30px); transition: opacity 0.6s ease-out, transform 0.6s ease-out; }
+    .fade-up.visible { opacity: 1; transform: translateY(0); }
+    .glow-border { border: 1px solid var(--border); box-shadow: 0 0 20px rgba(59, 130, 246, 0.05); transition: border-color 0.3s, box-shadow 0.3s, background 0.3s; background: var(--bg-card); backdrop-filter: blur(8px); }
+    .glow-border:hover { border-color: var(--border-hover); box-shadow: 0 0 30px rgba(59, 130, 246, 0.1); }
+    .gradient-text { background: linear-gradient(135deg, #3b82f6, #8b5cf6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .terminal { background: var(--bg-terminal); border: 1px solid var(--border); border-radius: 12px; overflow: hidden; transition: background 0.3s; }
+    .terminal-header { background: var(--bg-terminal-header); padding: 12px 16px; display: flex; align-items: center; gap: 8px; transition: background 0.3s; }
+    .terminal-dot { width: 12px; height: 12px; border-radius: 50%; }
+    .skill-tag { transition: all 0.2s; }
+    .skill-tag:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(59, 130, 246, 0.2); }
+    .particle { position: absolute; width: 2px; height: 2px; background: var(--particle-color); border-radius: 50%; animation: float linear infinite; }
+    @keyframes float { 0% { transform: translateY(0) translateX(0); opacity: 0; } 10% { opacity: 1; } 90% { opacity: 1; } 100% { transform: translateY(-100vh) translateX(20px); opacity: 0; } }
+    .nav-link { position: relative; }
+    .nav-link::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 2px; background: #3b82f6; transition: width 0.3s; }
+    .nav-link:hover::after, .nav-link.active::after { width: 100%; }
+    .metric { color: #60a5fa; font-weight: 600; font-family: 'JetBrains Mono', monospace; }
+    .avatar-glow { filter: drop-shadow(0 0 40px rgba(59, 130, 246, 0.3)); }
+    .grid-bg { background-image: linear-gradient(var(--grid-line) 1px, transparent 1px), linear-gradient(90deg, var(--grid-line) 1px, transparent 1px); background-size: 60px 60px; }
+    /* Tool logo styling */
+    .tool-logo { transition: all 0.3s; filter: var(--logo-filter); }
+    .tool-logo:hover { filter: var(--logo-hover); transform: scale(1.15); }
+    /* Light mode text overrides */
+    html.light .text-white { color: #1e293b !important; }
+    html.light .text-dark-100 { color: #475569 !important; }
+    html.light .text-dark-200 { color: #64748b !important; }
+    html.light .text-dark-300 { color: #94a3b8 !important; }
+    html.light .text-dark-50 { color: #334155 !important; }
+    html.light .bg-dark-700\/50 { background: rgba(255,255,255,0.7) !important; }
+    html.light .bg-dark-500 { background: #e2e8f0 !important; }
+    html.light .border-dark-300 { border-color: #cbd5e1 !important; }
+    html.light .border-dark-400\/30 { border-color: rgba(203,213,225,0.5) !important; }
+    html.light .bg-dark-900\/80 { background: rgba(248,250,252,0.85) !important; }
+    html.light .border-dark-400\/20 { border-color: rgba(203,213,225,0.3) !important; }
+    html.light .font-mono.text-dark-200 { color: #64748b !important; }
+    html.light .text-green-400 { color: #16a34a !important; }
+    html.light .company-logo { filter: brightness(1) !important; opacity: 0.7; }
+    /* Theme toggle */
+    .theme-toggle { transition: all 0.3s; }
+    .theme-toggle:hover { transform: rotate(30deg) scale(1.1); }
+    /* Blog card */
+    .blog-card { transition: all 0.3s; }
+    .blog-card:hover { transform: translateY(-4px); }
+    /* Scrolling logos */
+    @keyframes scroll-left { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
+    .logo-scroll { animation: scroll-left 30s linear infinite; }
+    .logo-scroll:hover { animation-play-state: paused; }
+    /* Company logo container */
+    .company-logo { height: 32px; width: auto; filter: brightness(0) invert(1); opacity: 0.5; transition: all 0.3s; }
+    .company-logo:hover { opacity: 1; }
+  </style>
+</head>
+<body class="grid-bg antialiased">
+  <div id="particles" class="fixed inset-0 pointer-events-none z-0 overflow-hidden"></div>
 
-  <body>
-    <div id="root"></div>
-    <!-- IMPORTANT: DO NOT REMOVE THIS SCRIPT TAG OR THIS VERY COMMENT! -->
-    <script src="https://cdn.gpteng.co/gptengineer.js" type="module"></script>
-  </body>
+  <!-- Navigation -->
+  <nav class="fixed top-0 w-full z-50 backdrop-blur-md bg-dark-900/80 border-b border-dark-400/30">
+    <div class="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
+      <a href="#" class="font-mono text-lg font-bold text-white tracking-tight">
+        <span class="text-accent">~/</span>chathushka
+      </a>
+      <div class="hidden md:flex items-center gap-6">
+        <a href="#about" class="nav-link text-sm text-dark-100 hover:text-white transition-colors">About</a>
+        <a href="#experience" class="nav-link text-sm text-dark-100 hover:text-white transition-colors">Experience</a>
+        <a href="#skills" class="nav-link text-sm text-dark-100 hover:text-white transition-colors">Skills</a>
+        <a href="#projects" class="nav-link text-sm text-dark-100 hover:text-white transition-colors">Projects</a>
+        <a href="#blog" class="nav-link text-sm text-dark-100 hover:text-white transition-colors">Blog</a>
+        <a href="#education" class="nav-link text-sm text-dark-100 hover:text-white transition-colors">Education</a>
+        <a href="#contact" class="nav-link text-sm text-dark-100 hover:text-white transition-colors">Contact</a>
+        <button id="theme-toggle" class="theme-toggle ml-2 p-2 rounded-lg hover:bg-dark-400/30 text-dark-100 hover:text-white" title="Toggle theme">
+          <svg id="theme-icon-dark" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          <svg id="theme-icon-light" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+        </button>
+      </div>
+      <div class="flex items-center gap-2 md:hidden">
+        <button id="theme-toggle-mobile" class="theme-toggle p-2 rounded-lg hover:bg-dark-400/30 text-dark-100 hover:text-white" title="Toggle theme">
+          <svg id="theme-icon-dark-m" class="w-5 h-5 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"/></svg>
+          <svg id="theme-icon-light-m" class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"/></svg>
+        </button>
+      <button id="menu-toggle" class="text-dark-100 hover:text-white">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden px-6 pb-4">
+      <div class="flex flex-col gap-3">
+        <a href="#about" class="text-sm text-dark-100 hover:text-white transition-colors">About</a>
+        <a href="#experience" class="text-sm text-dark-100 hover:text-white transition-colors">Experience</a>
+        <a href="#skills" class="text-sm text-dark-100 hover:text-white transition-colors">Skills</a>
+        <a href="#projects" class="text-sm text-dark-100 hover:text-white transition-colors">Projects</a>
+        <a href="#blog" class="text-sm text-dark-100 hover:text-white transition-colors">Blog</a>
+        <a href="#education" class="text-sm text-dark-100 hover:text-white transition-colors">Education</a>
+        <a href="#contact" class="text-sm text-dark-100 hover:text-white transition-colors">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="min-h-screen flex items-center justify-center relative px-6 pt-20">
+    <div class="max-w-6xl mx-auto w-full grid md:grid-cols-2 gap-12 items-center">
+      <div class="fade-up">
+        <p class="font-mono text-accent text-sm mb-4 tracking-wider">$ whoami</p>
+        <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-white mb-4 leading-tight">
+          Chathushka<br/>Rodrigo
+        </h1>
+        <div class="font-mono text-xl sm:text-2xl text-dark-100 mb-6">
+          <span id="typed-text"></span><span class="cursor"></span>
+        </div>
+        <p class="text-dark-100 text-lg mb-8 max-w-lg leading-relaxed">
+          Building reliable infrastructure at scale. Crafting native Apple experiences. Passionate about automating everything and shipping fast with confidence.
+        </p>
+        <div class="flex flex-wrap gap-4">
+          <a href="https://lk.linkedin.com/in/chathushkarodrigo" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center gap-2 px-6 py-3 bg-accent hover:bg-accent-dark text-white rounded-lg font-medium transition-all hover:shadow-lg hover:shadow-accent/25">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+            LinkedIn
+          </a>
+          <a href="https://github.com/ChathushkaRodrigo" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center gap-2 px-6 py-3 border border-dark-300 hover:border-accent text-white rounded-lg font-medium transition-all hover:shadow-lg hover:shadow-accent/10">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+            GitHub
+          </a>
+          <a href="https://medium.com/@chathushkarodrigo" target="_blank" rel="noopener noreferrer"
+             class="inline-flex items-center gap-2 px-6 py-3 border border-dark-300 hover:border-accent text-white rounded-lg font-medium transition-all hover:shadow-lg hover:shadow-accent/10">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M13.54 12a6.8 6.8 0 01-6.77 6.82A6.8 6.8 0 010 12a6.8 6.8 0 016.77-6.82A6.8 6.8 0 0113.54 12zm7.42 0c0 3.54-1.51 6.42-3.38 6.42-1.87 0-3.39-2.88-3.39-6.42s1.52-6.42 3.39-6.42 3.38 2.88 3.38 6.42M24 12c0 3.17-.53 5.75-1.19 5.75-.66 0-1.19-2.58-1.19-5.75s.53-5.75 1.19-5.75C23.47 6.25 24 8.83 24 12z"/></svg>
+            Blog
+          </a>
+          <a href="mailto:chathushkarodrigo@gmail.com"
+             class="inline-flex items-center gap-2 px-6 py-3 border border-dark-300 hover:border-accent text-white rounded-lg font-medium transition-all hover:shadow-lg hover:shadow-accent/10">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            Email
+          </a>
+        </div>
+      </div>
+      <!-- Avatar -->
+      <div class="fade-up flex justify-center md:justify-end" style="transition-delay: 0.2s;">
+        <div class="relative">
+          <div class="absolute inset-0 bg-accent/20 rounded-full blur-3xl"></div>
+          <div class="relative w-64 h-64 sm:w-80 sm:h-80 rounded-full avatar-glow overflow-hidden">
+            <img src="/avatar.png" alt="Chathushka Rodrigo" class="w-full h-full object-cover"
+                 onerror="this.style.display='none'; document.getElementById('avatar-fallback').style.display='flex';" />
+            <div id="avatar-fallback" class="absolute inset-0 bg-gradient-to-br from-accent/30 to-purple-600/30 border-2 border-accent/20 rounded-full items-center justify-center" style="display:none;">
+              <span class="text-6xl sm:text-7xl font-bold gradient-text font-mono">CR</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+      <svg class="w-6 h-6 text-dark-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"/>
+      </svg>
+    </div>
+  </section>
+
+  <!-- Tech Logos Marquee -->
+  <section class="py-8 border-y border-dark-400/20 overflow-hidden">
+    <div class="flex items-center logo-scroll" style="width: max-content;">
+      <!-- Double for seamless loop -->
+      <div class="flex items-center gap-12 px-6">
+        <i class="devicon-amazonwebservices-plain-wordmark text-4xl tool-logo text-[#FF9900]" title="AWS"></i>
+        <i class="devicon-kubernetes-plain text-4xl tool-logo text-[#326CE5]" title="Kubernetes"></i>
+        <i class="devicon-docker-plain text-4xl tool-logo text-[#2496ED]" title="Docker"></i>
+        <i class="devicon-jenkins-line text-4xl tool-logo text-[#D24939]" title="Jenkins"></i>
+        <i class="devicon-terraform-plain text-4xl tool-logo text-[#7B42BC]" title="Terraform"></i>
+        <i class="devicon-linux-plain text-4xl tool-logo text-[#FCC624]" title="Linux"></i>
+        <i class="devicon-python-plain text-4xl tool-logo text-[#3776AB]" title="Python"></i>
+        <i class="devicon-git-plain text-4xl tool-logo text-[#F05032]" title="Git"></i>
+        <i class="devicon-googlecloud-plain text-4xl tool-logo text-[#4285F4]" title="GCP"></i>
+        <i class="devicon-swift-plain text-4xl tool-logo text-[#F05138]" title="Swift"></i>
+        <i class="devicon-apple-original text-4xl tool-logo text-white" title="Apple"></i>
+        <i class="devicon-xcode-plain text-4xl tool-logo text-[#147EFB]" title="Xcode"></i>
+        <i class="devicon-react-original text-4xl tool-logo text-[#61DAFB]" title="React"></i>
+        <i class="devicon-nodejs-plain text-4xl tool-logo text-[#339933]" title="Node.js"></i>
+        <i class="devicon-argocd-plain text-4xl tool-logo text-[#EF7B4D]" title="ArgoCD"></i>
+        <i class="devicon-grafana-plain text-4xl tool-logo text-[#F46800]" title="Grafana"></i>
+        <i class="devicon-bitbucket-original text-4xl tool-logo text-[#0052CC]" title="Bitbucket"></i>
+        <i class="devicon-postgresql-plain text-4xl tool-logo text-[#4169E1]" title="PostgreSQL"></i>
+      </div>
+      <div class="flex items-center gap-12 px-6">
+        <i class="devicon-amazonwebservices-plain-wordmark text-4xl tool-logo text-[#FF9900]" title="AWS"></i>
+        <i class="devicon-kubernetes-plain text-4xl tool-logo text-[#326CE5]" title="Kubernetes"></i>
+        <i class="devicon-docker-plain text-4xl tool-logo text-[#2496ED]" title="Docker"></i>
+        <i class="devicon-jenkins-line text-4xl tool-logo text-[#D24939]" title="Jenkins"></i>
+        <i class="devicon-terraform-plain text-4xl tool-logo text-[#7B42BC]" title="Terraform"></i>
+        <i class="devicon-linux-plain text-4xl tool-logo text-[#FCC624]" title="Linux"></i>
+        <i class="devicon-python-plain text-4xl tool-logo text-[#3776AB]" title="Python"></i>
+        <i class="devicon-git-plain text-4xl tool-logo text-[#F05032]" title="Git"></i>
+        <i class="devicon-googlecloud-plain text-4xl tool-logo text-[#4285F4]" title="GCP"></i>
+        <i class="devicon-swift-plain text-4xl tool-logo text-[#F05138]" title="Swift"></i>
+        <i class="devicon-apple-original text-4xl tool-logo text-white" title="Apple"></i>
+        <i class="devicon-xcode-plain text-4xl tool-logo text-[#147EFB]" title="Xcode"></i>
+        <i class="devicon-react-original text-4xl tool-logo text-[#61DAFB]" title="React"></i>
+        <i class="devicon-nodejs-plain text-4xl tool-logo text-[#339933]" title="Node.js"></i>
+        <i class="devicon-argocd-plain text-4xl tool-logo text-[#EF7B4D]" title="ArgoCD"></i>
+        <i class="devicon-grafana-plain text-4xl tool-logo text-[#F46800]" title="Grafana"></i>
+        <i class="devicon-bitbucket-original text-4xl tool-logo text-[#0052CC]" title="Bitbucket"></i>
+        <i class="devicon-postgresql-plain text-4xl tool-logo text-[#4169E1]" title="PostgreSQL"></i>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-24 px-6">
+    <div class="max-w-4xl mx-auto">
+      <div class="fade-up">
+        <p class="font-mono text-accent text-sm mb-2 tracking-wider">$ cat about.md</p>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-8">About Me</h2>
+      </div>
+      <div class="fade-up terminal" style="transition-delay: 0.1s;">
+        <div class="terminal-header">
+          <div class="terminal-dot bg-red-500"></div>
+          <div class="terminal-dot bg-yellow-500"></div>
+          <div class="terminal-dot bg-green-500"></div>
+          <span class="text-dark-200 text-xs font-mono ml-2">about.sh</span>
+        </div>
+        <div class="p-6 sm:p-8 font-mono text-sm sm:text-base leading-relaxed space-y-4">
+          <p><span class="text-green-400">&#10095;</span> DevOps Engineer & <span class="text-orange-400">macOS/iOS Developer</span> based in <span class="text-accent">Colombo, Sri Lanka</span> with a strong focus on cloud infrastructure, CI/CD automation, container orchestration, and native Apple development.</p>
+          <p><span class="text-green-400">&#10095;</span> Currently working as a <span class="text-accent">DevOps Engineer L3</span> at <span class="text-purple-400">PetVisor</span>, managing production deployments across multiple veterinary software products using EKS, ensuring <span class="metric">99% uptime</span>.</p>
+          <p><span class="text-green-400">&#10095;</span> Reduced AWS infrastructure costs by <span class="metric">42%</span>, improved delivery efficiency by <span class="metric">35%</span>, and improved software security by <span class="metric">91%</span> across my career.</p>
+          <p><span class="text-green-400">&#10095;</span> Also passionate about building native <span class="text-orange-400">Swift/SwiftUI</span> apps for <span class="text-orange-400">macOS & iOS</span>, blending my infrastructure expertise with polished user experiences.</p>
+          <p><span class="text-green-400">&#10095;</span> Software Engineering graduate from <span class="text-accent">Curtin University</span>. Active <span class="text-green-400">technical writer</span> on Medium covering Kubernetes, Docker, ArgoCD, and DevSecOps.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" class="py-24 px-6">
+    <div class="max-w-4xl mx-auto">
+      <div class="fade-up">
+        <p class="font-mono text-accent text-sm mb-2 tracking-wider">$ kubectl get deployments --all-namespaces</p>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-12">Experience</h2>
+      </div>
+
+      <div class="space-y-8">
+        <!-- PetVisor -->
+        <div class="fade-up glow-border rounded-xl p-6 sm:p-8 bg-dark-700/50 backdrop-blur-sm" style="transition-delay: 0.1s;">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4">
+            <div class="flex items-center gap-4">
+              <img src="/lovable-uploads/5d5b67e8-1044-4958-a784-8d32f54c1542.png" alt="PetVisor" class="w-10 h-10 rounded-lg object-contain bg-white/10 p-1" />
+              <div>
+                <h3 class="text-xl font-bold text-white">DevOps Engineer L3</h3>
+                <p class="text-accent font-medium">PetVisor</p>
+              </div>
+            </div>
+            <span class="font-mono text-sm text-green-400 mt-2 sm:mt-0 flex items-center gap-2">
+              <span class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></span> Present
+            </span>
+          </div>
+          <p class="text-dark-200 text-sm mb-4">Head of VetGroup - Veterinary Software Platform</p>
+          <ul class="space-y-3 text-dark-100 text-sm leading-relaxed">
+            <li class="flex gap-3"><span class="text-accent mt-1 shrink-0">&#9654;</span><span>Enhanced and orchestrated vet clinic customer production deployments using <span class="text-white font-medium">EKS</span>, ensuring <span class="metric">99% uptime</span></span></li>
+            <li class="flex gap-3"><span class="text-accent mt-1 shrink-0">&#9654;</span><span>Managed sub-product release procedures and deployments by customer region, achieving <span class="metric">80% efficiency</span> in deployments</span></li>
+            <li class="flex gap-3"><span class="text-accent mt-1 shrink-0">&#9654;</span><span>Reduced weekly AWS infrastructure cost by <span class="metric">42%</span> by optimizing resource usage, migrating to ECS agents as Jenkins nodes across production/staging/pre-prod accounts</span></li>
+          </ul>
+          <div class="flex flex-wrap gap-2 mt-5">
+            <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-accent/10 text-accent border border-accent/20">AWS EKS</span>
+            <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-accent/10 text-accent border border-accent/20">Jenkins</span>
+            <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-accent/10 text-accent border border-accent/20">ECS Fargate</span>
+            <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-accent/10 text-accent border border-accent/20">Route53</span>
+          </div>
+        </div>
+
+        <!-- Vetstoria -->
+        <div class="fade-up glow-border rounded-xl p-6 sm:p-8 bg-dark-700/50 backdrop-blur-sm" style="transition-delay: 0.15s;">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4">
+            <div class="flex items-center gap-4">
+              <img src="/lovable-uploads/9e1b254f-70b8-4ba8-a19d-df9a2f1e433b.png" alt="Vetstoria" class="w-10 h-10 rounded-lg object-contain bg-white/10 p-1" />
+              <div>
+                <h3 class="text-xl font-bold text-white">DevOps Engineer L2</h3>
+                <p class="text-accent font-medium">Vetstoria</p>
+              </div>
+            </div>
+            <span class="font-mono text-sm text-dark-200 mt-2 sm:mt-0">Previous</span>
+          </div>
+          <p class="text-dark-200 text-sm mb-4">Veterinary Appointment Scheduling Software</p>
+          <ul class="space-y-3 text-dark-100 text-sm leading-relaxed">
+            <li class="flex gap-3"><span class="text-accent mt-1 shrink-0">&#9654;</span><span>Orchestrated software delivery pipeline using <span class="text-white font-medium">Jenkins</span> and <span class="text-white font-medium">AWS CodePipeline</span></span></li>
+            <li class="flex gap-3"><span class="text-accent mt-1 shrink-0">&#9654;</span><span>Optimized CI/CD practices, contributing to <span class="metric">35% improvement</span> in delivery efficiency and <span class="metric">60% reduction</span> in release disruptions</span></li>
+            <li class="flex gap-3"><span class="text-accent mt-1 shrink-0">&#9654;</span><span>Provisioned infrastructure for booking platform using <span class="text-white font-medium">AWS EKS, ELB, Route53</span> and <span class="text-white font-medium">ECS Fargate</span></span></li>
+          </ul>
+          <div class="flex flex-wrap gap-2 mt-5">
+            <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-accent/10 text-accent border border-accent/20">AWS CodePipeline</span>
+            <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-accent/10 text-accent border border-accent/20">Jenkins</span>
+            <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-accent/10 text-accent border border-accent/20">EKS</span>
+            <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-accent/10 text-accent border border-accent/20">BitBucket</span>
+          </div>
+        </div>
+
+        <!-- I4T Labs -->
+        <div class="fade-up glow-border rounded-xl p-6 sm:p-8 bg-dark-700/50 backdrop-blur-sm" style="transition-delay: 0.2s;">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4">
+            <div class="flex items-center gap-4">
+              <img src="/lovable-uploads/c182376e-aa63-4fef-86fb-59ec983f3489.png" alt="I4T Labs" class="w-10 h-10 rounded-lg object-contain bg-white/10 p-1" />
+              <div>
+                <h3 class="text-xl font-bold text-white">Associate Cloud Engineer (DevOps)</h3>
+                <p class="text-accent font-medium">I4T Labs</p>
+              </div>
+            </div>
+            <span class="font-mono text-sm text-dark-200 mt-2 sm:mt-0">Previous</span>
+          </div>
+          <p class="text-dark-200 text-sm mb-4">Field Service Management Software</p>
+          <ul class="space-y-3 text-dark-100 text-sm leading-relaxed">
+            <li class="flex gap-3"><span class="text-accent mt-1 shrink-0">&#9654;</span><span>Migrated legacy environments to secure state, achieving <span class="metric">78% pen-test success</span> rate adhering to ISO security standards</span></li>
+            <li class="flex gap-3"><span class="text-accent mt-1 shrink-0">&#9654;</span><span>Improved software security by <span class="metric">91%</span> through bi-weekly pen-test troubleshooting</span></li>
+            <li class="flex gap-3"><span class="text-accent mt-1 shrink-0">&#9654;</span><span>Automated cloud server scheduling, reducing <span class="metric">GCP costs by 60%</span>. Dockerized applications reducing <span class="metric">30% server resource</span> usage</span></li>
+          </ul>
+          <div class="flex flex-wrap gap-2 mt-5">
+            <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-accent/10 text-accent border border-accent/20">GCP</span>
+            <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-accent/10 text-accent border border-accent/20">Docker</span>
+            <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-accent/10 text-accent border border-accent/20">PHP</span>
+            <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-accent/10 text-accent border border-accent/20">Security</span>
+          </div>
+        </div>
+
+        <!-- Arimac -->
+        <div class="fade-up glow-border rounded-xl p-6 sm:p-8 bg-dark-700/50 backdrop-blur-sm" style="transition-delay: 0.25s;">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-4">
+            <div class="flex items-center gap-4">
+              <img src="/lovable-uploads/e366f8aa-6d23-42a3-a027-240b252df8e4.png" alt="Arimac" class="w-10 h-10 rounded-lg object-contain bg-white/10 p-1" />
+              <div>
+                <h3 class="text-xl font-bold text-white">DevOps Engineer Intern</h3>
+                <p class="text-accent font-medium">Arimac</p>
+              </div>
+            </div>
+            <span class="font-mono text-sm text-dark-200 mt-2 sm:mt-0">Internship</span>
+          </div>
+          <p class="text-dark-200 text-sm mb-4">E2E Digital Agency</p>
+          <ul class="space-y-3 text-dark-100 text-sm leading-relaxed">
+            <li class="flex gap-3"><span class="text-accent mt-1 shrink-0">&#9654;</span><span>Handled client deployments using CI/CD, Docker, and customer-managed Kubernetes clusters, automating <span class="metric">60% of manual tasks</span></span></li>
+            <li class="flex gap-3"><span class="text-accent mt-1 shrink-0">&#9654;</span><span>Reduced costs by <span class="metric">20%</span> via Docker multi-node deployments over standalone setups</span></li>
+            <li class="flex gap-3"><span class="text-accent mt-1 shrink-0">&#9654;</span><span>Boosted CI/CD process efficiency by <span class="metric">30%</span> through multi-cloud domain exposure and Git strategies</span></li>
+          </ul>
+          <div class="flex flex-wrap gap-2 mt-5">
+            <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-accent/10 text-accent border border-accent/20">Kubernetes</span>
+            <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-accent/10 text-accent border border-accent/20">Docker</span>
+            <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-accent/10 text-accent border border-accent/20">CI/CD</span>
+            <span class="text-xs font-mono px-2.5 py-1 rounded-full bg-accent/10 text-accent border border-accent/20">Multi-Cloud</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="py-24 px-6">
+    <div class="max-w-4xl mx-auto">
+      <div class="fade-up">
+        <p class="font-mono text-accent text-sm mb-2 tracking-wider">$ helm list --all-namespaces</p>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-12">Skills & Tools</h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Cloud -->
+        <div class="fade-up glow-border rounded-xl p-6 bg-dark-700/50 backdrop-blur-sm" style="transition-delay: 0.05s;">
+          <div class="flex items-center gap-3 mb-4">
+            <i class="devicon-amazonwebservices-plain-wordmark text-2xl text-[#FF9900]"></i>
+            <h3 class="font-bold text-white">Cloud</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-tag text-xs font-mono px-3 py-1.5 rounded-full bg-dark-500 text-dark-50 border border-dark-300">AWS</span>
+            <span class="skill-tag text-xs font-mono px-3 py-1.5 rounded-full bg-dark-500 text-dark-50 border border-dark-300">GCP</span>
+            <span class="skill-tag text-xs font-mono px-3 py-1.5 rounded-full bg-dark-500 text-dark-50 border border-dark-300">EKS</span>
+            <span class="skill-tag text-xs font-mono px-3 py-1.5 rounded-full bg-dark-500 text-dark-50 border border-dark-300">ECS</span>
+            <span class="skill-tag text-xs font-mono px-3 py-1.5 rounded-full bg-dark-500 text-dark-50 border border-dark-300">Route53</span>
+            <span class="skill-tag text-xs font-mono px-3 py-1.5 rounded-full bg-dark-500 text-dark-50 border border-dark-300">ELB</span>
+          </div>
+        </div>
+
+        <!-- CI/CD -->
+        <div class="fade-up glow-border rounded-xl p-6 bg-dark-700/50 backdrop-blur-sm" style="transition-delay: 0.1s;">
+          <div class="flex items-center gap-3 mb-4">
+            <i class="devicon-jenkins-line text-2xl text-[#D24939]"></i>
+            <h3 class="font-bold text-white">CI/CD</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-tag text-xs font-mono px-3 py-1.5 rounded-full bg-dark-500 text-dark-50 border border-dark-300">Jenkins</span>
+            <span class="skill-tag text-xs font-mono px-3 py-1.5 rounded-full bg-dark-500 text-dark-50 border border-dark-300">CodePipeline</span>
+            <span class="skill-tag text-xs font-mono px-3 py-1.5 rounded-full bg-dark-500 text-dark-50 border border-dark-300">ArgoCD</span>
+            <span class="skill-tag text-xs font-mono px-3 py-1.5 rounded-full bg-dark-500 text-dark-50 border border-dark-300">BitBucket</span>
+            <span class="skill-tag text-xs font-mono px-3 py-1.5 rounded-full bg-dark-500 text-dark-50 border border-dark-300">Git</span>
+          </div>
+        </div>
+
+        <!-- Containers -->
+        <div class="fade-up glow-border rounded-xl p-6 bg-dark-700/50 backdrop-blur-sm" style="transition-delay: 0.15s;">
+          <div class="flex items-center gap-3 mb-4">
+            <i class="devicon-kubernetes-plain text-2xl text-[#326CE5]"></i>
+            <h3 class="font-bold text-white">Containers</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-tag text-xs font-mono px-3 py-1.5 rounded-full bg-dark-500 text-dark-50 border border-dark-300">Docker</span>
+            <span class="skill-tag text-xs font-mono px-3 py-1.5 rounded-full bg-dark-500 text-dark-50 border border-dark-300">Kubernetes</span>
+            <span class="skill-tag text-xs font-mono px-3 py-1.5 rounded-full bg-dark-500 text-dark-50 border border-dark-300">ECS Fargate</span>
+            <span class="skill-tag text-xs font-mono px-3 py-1.5 rounded-full bg-dark-500 text-dark-50 border border-dark-300">Kyverno</span>
+          </div>
+        </div>
+
+        <!-- Apple / iOS -->
+        <div class="fade-up glow-border rounded-xl p-6 bg-dark-700/50 backdrop-blur-sm" style="transition-delay: 0.2s;">
+          <div class="flex items-center gap-3 mb-4">
+            <i class="devicon-apple-original text-2xl text-white"></i>
+            <h3 class="font-bold text-white">Apple Dev</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-tag text-xs font-mono px-3 py-1.5 rounded-full bg-dark-500 text-dark-50 border border-dark-300">Swift</span>
+            <span class="skill-tag text-xs font-mono px-3 py-1.5 rounded-full bg-dark-500 text-dark-50 border border-dark-300">SwiftUI</span>
+            <span class="skill-tag text-xs font-mono px-3 py-1.5 rounded-full bg-dark-500 text-dark-50 border border-dark-300">Xcode</span>
+            <span class="skill-tag text-xs font-mono px-3 py-1.5 rounded-full bg-dark-500 text-dark-50 border border-dark-300">macOS</span>
+            <span class="skill-tag text-xs font-mono px-3 py-1.5 rounded-full bg-dark-500 text-dark-50 border border-dark-300">iOS</span>
+          </div>
+        </div>
+
+        <!-- Infrastructure -->
+        <div class="fade-up glow-border rounded-xl p-6 bg-dark-700/50 backdrop-blur-sm" style="transition-delay: 0.25s;">
+          <div class="flex items-center gap-3 mb-4">
+            <i class="devicon-linux-plain text-2xl text-[#FCC624]"></i>
+            <h3 class="font-bold text-white">Infrastructure</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-tag text-xs font-mono px-3 py-1.5 rounded-full bg-dark-500 text-dark-50 border border-dark-300">Linux</span>
+            <span class="skill-tag text-xs font-mono px-3 py-1.5 rounded-full bg-dark-500 text-dark-50 border border-dark-300">Networking</span>
+            <span class="skill-tag text-xs font-mono px-3 py-1.5 rounded-full bg-dark-500 text-dark-50 border border-dark-300">Python</span>
+            <span class="skill-tag text-xs font-mono px-3 py-1.5 rounded-full bg-dark-500 text-dark-50 border border-dark-300">Terraform</span>
+          </div>
+        </div>
+
+        <!-- Development -->
+        <div class="fade-up glow-border rounded-xl p-6 bg-dark-700/50 backdrop-blur-sm" style="transition-delay: 0.3s;">
+          <div class="flex items-center gap-3 mb-4">
+            <i class="devicon-react-original text-2xl text-[#61DAFB]"></i>
+            <h3 class="font-bold text-white">Development</h3>
+          </div>
+          <div class="flex flex-wrap gap-2">
+            <span class="skill-tag text-xs font-mono px-3 py-1.5 rounded-full bg-dark-500 text-dark-50 border border-dark-300">NodeJS</span>
+            <span class="skill-tag text-xs font-mono px-3 py-1.5 rounded-full bg-dark-500 text-dark-50 border border-dark-300">React</span>
+            <span class="skill-tag text-xs font-mono px-3 py-1.5 rounded-full bg-dark-500 text-dark-50 border border-dark-300">JavaScript</span>
+            <span class="skill-tag text-xs font-mono px-3 py-1.5 rounded-full bg-dark-500 text-dark-50 border border-dark-300">SQL</span>
+            <span class="skill-tag text-xs font-mono px-3 py-1.5 rounded-full bg-dark-500 text-dark-50 border border-dark-300">REST API</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-24 px-6">
+    <div class="max-w-4xl mx-auto">
+      <div class="fade-up">
+        <p class="font-mono text-accent text-sm mb-2 tracking-wider">$ ls -la ~/projects/</p>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Projects</h2>
+        <p class="text-dark-200 mb-12">Key infrastructure and development projects I've led or contributed to.</p>
+      </div>
+
+      <!-- iOS & macOS Apps -->
+      <h3 class="fade-up text-lg font-bold text-white mb-6 flex items-center gap-3" style="transition-delay: 0.05s;">
+        <i class="devicon-apple-original text-xl text-white"></i> iOS & macOS Apps
+      </h3>
+      <div class="grid sm:grid-cols-2 gap-6 mb-12">
+        <div class="fade-up glow-border rounded-xl p-6 bg-dark-700/50 backdrop-blur-sm" style="transition-delay: 0.05s;">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-400 to-red-500 flex items-center justify-center text-white text-lg">&#9201;</div>
+            <div>
+              <h3 class="font-bold text-white">Chronometer</h3>
+              <span class="text-xs text-dark-200 font-mono">iOS</span>
+            </div>
+          </div>
+          <p class="text-dark-100 text-sm mb-4 leading-relaxed">World Clock app for tracking multiple time zones with a beautiful, intuitive interface.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs font-mono px-2 py-1 rounded bg-orange-500/10 text-orange-400">Swift</span>
+            <span class="text-xs font-mono px-2 py-1 rounded bg-orange-500/10 text-orange-400">SwiftUI</span>
+            <span class="text-xs font-mono px-2 py-1 rounded bg-orange-500/10 text-orange-400">iOS</span>
+          </div>
+        </div>
+
+        <div class="fade-up glow-border rounded-xl p-6 bg-dark-700/50 backdrop-blur-sm" style="transition-delay: 0.1s;">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-indigo-500 to-purple-600 flex items-center justify-center text-white text-lg">&#10024;</div>
+            <div>
+              <h3 class="font-bold text-white">Aura</h3>
+              <span class="text-xs text-dark-200 font-mono">iOS</span>
+            </div>
+          </div>
+          <p class="text-dark-100 text-sm mb-4 leading-relaxed">Sleep Tracker app that helps monitor and improve your sleep patterns with detailed insights.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs font-mono px-2 py-1 rounded bg-purple-500/10 text-purple-400">Swift</span>
+            <span class="text-xs font-mono px-2 py-1 rounded bg-purple-500/10 text-purple-400">SwiftUI</span>
+            <span class="text-xs font-mono px-2 py-1 rounded bg-purple-500/10 text-purple-400">HealthKit</span>
+          </div>
+        </div>
+
+        <div class="fade-up glow-border rounded-xl p-6 bg-dark-700/50 backdrop-blur-sm" style="transition-delay: 0.15s;">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-yellow-400 to-amber-500 flex items-center justify-center text-white text-lg">&#9733;</div>
+            <div>
+              <h3 class="font-bold text-white">Luma</h3>
+              <span class="text-xs text-dark-200 font-mono">iOS</span>
+            </div>
+          </div>
+          <p class="text-dark-100 text-sm mb-4 leading-relaxed">Daily Constellation Journal for tracking celestial events and personal reflections under the stars.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs font-mono px-2 py-1 rounded bg-yellow-500/10 text-yellow-400">Swift</span>
+            <span class="text-xs font-mono px-2 py-1 rounded bg-yellow-500/10 text-yellow-400">SwiftUI</span>
+            <span class="text-xs font-mono px-2 py-1 rounded bg-yellow-500/10 text-yellow-400">iOS</span>
+          </div>
+        </div>
+
+        <div class="fade-up glow-border rounded-xl p-6 bg-dark-700/50 backdrop-blur-sm" style="transition-delay: 0.2s;">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-cyan-400 to-blue-500 flex items-center justify-center text-white text-lg">&#9000;</div>
+            <div>
+              <h3 class="font-bold text-white">Tapsworth</h3>
+              <span class="text-xs text-dark-200 font-mono">macOS</span>
+            </div>
+          </div>
+          <p class="text-dark-100 text-sm mb-4 leading-relaxed">Redefine macOS typing with enhanced keyboard experience, custom sounds, and productivity features.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs font-mono px-2 py-1 rounded bg-cyan-500/10 text-cyan-400">Swift</span>
+            <span class="text-xs font-mono px-2 py-1 rounded bg-cyan-500/10 text-cyan-400">AppKit</span>
+            <span class="text-xs font-mono px-2 py-1 rounded bg-cyan-500/10 text-cyan-400">macOS</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Infrastructure & DevOps Projects -->
+      <h3 class="fade-up text-lg font-bold text-white mb-6 flex items-center gap-3" style="transition-delay: 0.05s;">
+        <i class="devicon-kubernetes-plain text-xl text-[#326CE5]"></i> Infrastructure & DevOps
+      </h3>
+      <div class="grid sm:grid-cols-2 gap-6 mb-12">
+        <div class="fade-up glow-border rounded-xl p-6 bg-dark-700/50 backdrop-blur-sm" style="transition-delay: 0.05s;">
+          <h3 class="font-bold text-white mb-2">EKS Production Platform</h3>
+          <p class="text-dark-100 text-sm mb-4 leading-relaxed">Multi-cluster EKS production platform serving veterinary clinic customers with 99% uptime SLA across regional deployments.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs font-mono px-2 py-1 rounded bg-accent/10 text-accent">EKS</span>
+            <span class="text-xs font-mono px-2 py-1 rounded bg-accent/10 text-accent">Helm</span>
+            <span class="text-xs font-mono px-2 py-1 rounded bg-accent/10 text-accent">Route53</span>
+          </div>
+        </div>
+        <div class="fade-up glow-border rounded-xl p-6 bg-dark-700/50 backdrop-blur-sm" style="transition-delay: 0.1s;">
+          <h3 class="font-bold text-white mb-2">CI/CD Pipeline Optimization</h3>
+          <p class="text-dark-100 text-sm mb-4 leading-relaxed">Redesigned delivery pipeline achieving 35% improvement in efficiency and 60% reduction in release disruptions.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs font-mono px-2 py-1 rounded bg-accent/10 text-accent">Jenkins</span>
+            <span class="text-xs font-mono px-2 py-1 rounded bg-accent/10 text-accent">CodePipeline</span>
+            <span class="text-xs font-mono px-2 py-1 rounded bg-accent/10 text-accent">ECS</span>
+          </div>
+        </div>
+        <div class="fade-up glow-border rounded-xl p-6 bg-dark-700/50 backdrop-blur-sm" style="transition-delay: 0.15s;">
+          <h3 class="font-bold text-white mb-2">AWS Cost Optimization</h3>
+          <p class="text-dark-100 text-sm mb-4 leading-relaxed">Reduced weekly AWS costs by 42% across 5+ accounts by migrating to ECS Fargate agents and right-sizing resources.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs font-mono px-2 py-1 rounded bg-accent/10 text-accent">ECS Fargate</span>
+            <span class="text-xs font-mono px-2 py-1 rounded bg-accent/10 text-accent">Cost Explorer</span>
+            <span class="text-xs font-mono px-2 py-1 rounded bg-accent/10 text-accent">CloudWatch</span>
+          </div>
+        </div>
+        <div class="fade-up glow-border rounded-xl p-6 bg-dark-700/50 backdrop-blur-sm" style="transition-delay: 0.2s;">
+          <h3 class="font-bold text-white mb-2">Legacy Migration & Security</h3>
+          <p class="text-dark-100 text-sm mb-4 leading-relaxed">Containerized legacy PHP apps with ISO security compliance. 78% pen-test success and 91% security improvement.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs font-mono px-2 py-1 rounded bg-accent/10 text-accent">Docker</span>
+            <span class="text-xs font-mono px-2 py-1 rounded bg-accent/10 text-accent">GCP</span>
+            <span class="text-xs font-mono px-2 py-1 rounded bg-accent/10 text-accent">Security</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Software & Dev Projects -->
+      <h3 class="fade-up text-lg font-bold text-white mb-6 flex items-center gap-3" style="transition-delay: 0.05s;">
+        <svg class="w-5 h-5 text-accent" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"/></svg>
+        Software & Dev Projects
+      </h3>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Vet Voice Transcribe -->
+        <div class="fade-up glow-border rounded-xl p-6 bg-dark-700/50 backdrop-blur-sm" style="transition-delay: 0.05s;">
+          <h3 class="font-bold text-white mb-2">Vet Voice Transcribe</h3>
+          <p class="text-dark-100 text-sm mb-4 leading-relaxed">Fully E2E Veterinary Booking Platform with Automated AI VOICE/CHAT Integrated Web Solution for clinics, using OpenAI Whisper, AWS, ReactJS, and ViteJS.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs font-mono px-2 py-1 rounded bg-accent/10 text-accent">Whisper</span>
+            <span class="text-xs font-mono px-2 py-1 rounded bg-accent/10 text-accent">OpenAI API</span>
+            <span class="text-xs font-mono px-2 py-1 rounded bg-accent/10 text-accent">AWS</span>
+            <span class="text-xs font-mono px-2 py-1 rounded bg-accent/10 text-accent">Python</span>
+            <span class="text-xs font-mono px-2 py-1 rounded bg-accent/10 text-accent">ViteJS</span>
+            <span class="text-xs font-mono px-2 py-1 rounded bg-accent/10 text-accent">React.js</span>
+          </div>
+        </div>
+
+        <!-- TITANS -->
+        <div class="fade-up glow-border rounded-xl p-6 bg-dark-700/50 backdrop-blur-sm" style="transition-delay: 0.1s;">
+          <h3 class="font-bold text-white mb-2">TITANS - Event Management System</h3>
+          <p class="text-dark-100 text-sm mb-4 leading-relaxed">Intuitive event management platform serving 680+ participants in a day, with QR code-based ticket verification and admin portal using MERN stack and GCP.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs font-mono px-2 py-1 rounded bg-accent/10 text-accent">MERN Stack</span>
+            <span class="text-xs font-mono px-2 py-1 rounded bg-accent/10 text-accent">GCP</span>
+            <span class="text-xs font-mono px-2 py-1 rounded bg-accent/10 text-accent">CI/CD</span>
+            <span class="text-xs font-mono px-2 py-1 rounded bg-accent/10 text-accent">Monitoring</span>
+          </div>
+        </div>
+
+        <!-- CDAP -->
+        <div class="fade-up glow-border rounded-xl p-6 bg-dark-700/50 backdrop-blur-sm" style="transition-delay: 0.15s;">
+          <h3 class="font-bold text-white mb-2">CDAP - Project Management (Calibre)</h3>
+          <p class="text-dark-100 text-sm mb-4 leading-relaxed">Large-scale project management portal for 4000+ students and 200+ staff at Curtin University, streamlining submissions, evaluations, and group management.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs font-mono px-2 py-1 rounded bg-accent/10 text-accent">Fullstack</span>
+            <span class="text-xs font-mono px-2 py-1 rounded bg-accent/10 text-accent">Project Mgmt</span>
+            <span class="text-xs font-mono px-2 py-1 rounded bg-accent/10 text-accent">Database Design</span>
+          </div>
+        </div>
+
+        <!-- Tesla Clone -->
+        <div class="fade-up glow-border rounded-xl p-6 bg-dark-700/50 backdrop-blur-sm" style="transition-delay: 0.2s;">
+          <h3 class="font-bold text-white mb-2">Tesla Front-End Clone</h3>
+          <p class="text-dark-100 text-sm mb-4 leading-relaxed">Tesla website clone using React.js and Material UI, demonstrating frontend architecture, reusable components, and responsive design.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs font-mono px-2 py-1 rounded bg-accent/10 text-accent">React.js</span>
+            <span class="text-xs font-mono px-2 py-1 rounded bg-accent/10 text-accent">Material UI</span>
+            <span class="text-xs font-mono px-2 py-1 rounded bg-accent/10 text-accent">Responsive</span>
+          </div>
+        </div>
+
+        <!-- Zoo Management -->
+        <div class="fade-up glow-border rounded-xl p-6 bg-dark-700/50 backdrop-blur-sm" style="transition-delay: 0.25s;">
+          <h3 class="font-bold text-white mb-2">Zoo Management System - Melaka Zoo</h3>
+          <p class="text-dark-100 text-sm mb-4 leading-relaxed">Zoo management solution for Melaka Zoo Organisation during industrial training, focusing on animal data handling and operational automation.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs font-mono px-2 py-1 rounded bg-accent/10 text-accent">System Design</span>
+            <span class="text-xs font-mono px-2 py-1 rounded bg-accent/10 text-accent">JavaScript</span>
+            <span class="text-xs font-mono px-2 py-1 rounded bg-accent/10 text-accent">PHP</span>
+            <span class="text-xs font-mono px-2 py-1 rounded bg-accent/10 text-accent">MySQL</span>
+          </div>
+        </div>
+
+        <!-- Online Help Desk -->
+        <div class="fade-up glow-border rounded-xl p-6 bg-dark-700/50 backdrop-blur-sm" style="transition-delay: 0.3s;">
+          <h3 class="font-bold text-white mb-2">Online Help Desk - Java Web App</h3>
+          <p class="text-dark-100 text-sm mb-4 leading-relaxed">Java-based Object-Oriented Web App to manage online help desk ticketing and student/staff interactions at Curtin University.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs font-mono px-2 py-1 rounded bg-accent/10 text-accent">Java</span>
+            <span class="text-xs font-mono px-2 py-1 rounded bg-accent/10 text-accent">OOP</span>
+            <span class="text-xs font-mono px-2 py-1 rounded bg-accent/10 text-accent">Web App</span>
+          </div>
+        </div>
+
+        <!-- Unity Game -->
+        <div class="fade-up glow-border rounded-xl p-6 bg-dark-700/50 backdrop-blur-sm" style="transition-delay: 0.35s;">
+          <h3 class="font-bold text-white mb-2">Unity 2D Game (DrunkDude)</h3>
+          <p class="text-dark-100 text-sm mb-4 leading-relaxed">Participated in Global Game Jam 2021 by developing a 2D side-scroller game, focusing on Unity physics and game dynamics.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs font-mono px-2 py-1 rounded bg-accent/10 text-accent">Unity</span>
+            <span class="text-xs font-mono px-2 py-1 rounded bg-accent/10 text-accent">C#</span>
+            <span class="text-xs font-mono px-2 py-1 rounded bg-accent/10 text-accent">Game Dev</span>
+          </div>
+        </div>
+
+        <!-- Employee Job Portal -->
+        <div class="fade-up glow-border rounded-xl p-6 bg-dark-700/50 backdrop-blur-sm" style="transition-delay: 0.4s;">
+          <h3 class="font-bold text-white mb-2">Employee Job Portal</h3>
+          <p class="text-dark-100 text-sm mb-4 leading-relaxed">Basic employee job portal using HTML, CSS, JavaScript, and PHP during university, supporting user authentication and job listings.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="text-xs font-mono px-2 py-1 rounded bg-accent/10 text-accent">HTML</span>
+            <span class="text-xs font-mono px-2 py-1 rounded bg-accent/10 text-accent">CSS</span>
+            <span class="text-xs font-mono px-2 py-1 rounded bg-accent/10 text-accent">JavaScript</span>
+            <span class="text-xs font-mono px-2 py-1 rounded bg-accent/10 text-accent">PHP</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Blog Section -->
+  <section id="blog" class="py-24 px-6">
+    <div class="max-w-4xl mx-auto">
+      <div class="fade-up">
+        <p class="font-mono text-accent text-sm mb-2 tracking-wider">$ curl medium.com/@chathushkarodrigo</p>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Latest from the Blog</h2>
+        <p class="text-dark-200 mb-12">Writing about Kubernetes, Docker, DevSecOps, and cloud-native tooling on <a href="https://medium.com/@chathushkarodrigo" target="_blank" rel="noopener noreferrer" class="text-accent hover:underline">Medium</a>.</p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 gap-6">
+        <a href="https://blog.devops.dev/k8s-chaos-not-on-my-watch-874d8a6de0e2" target="_blank" rel="noopener noreferrer"
+           class="fade-up blog-card glow-border rounded-xl p-6 bg-dark-700/50 backdrop-blur-sm block" style="transition-delay: 0.05s;">
+          <div class="flex items-center gap-2 mb-3">
+            <i class="devicon-kubernetes-plain text-lg text-[#326CE5]"></i>
+            <span class="text-xs font-mono text-dark-200">Nov 2025</span>
+          </div>
+          <h3 class="font-bold text-white mb-2 group-hover:text-accent">K8s Chaos? Not on My Watch!</h3>
+          <p class="text-dark-100 text-sm leading-relaxed">Policy as Code with Kyverno for Kubernetes cluster management</p>
+        </a>
+
+        <a href="https://blog.devops.dev/how-i-ended-my-kubernetes-nightmares-with-a-simple-tool-9e4154869dbb" target="_blank" rel="noopener noreferrer"
+           class="fade-up blog-card glow-border rounded-xl p-6 bg-dark-700/50 backdrop-blur-sm block" style="transition-delay: 0.1s;">
+          <div class="flex items-center gap-2 mb-3">
+            <i class="devicon-kubernetes-plain text-lg text-[#326CE5]"></i>
+            <span class="text-xs font-mono text-dark-200">Nov 2025</span>
+          </div>
+          <h3 class="font-bold text-white mb-2">How I Ended My Kubernetes Nightmares</h3>
+          <p class="text-dark-100 text-sm leading-relaxed">Multi-cluster management with AI-driven capabilities</p>
+        </a>
+
+        <a href="https://blog.devops.dev/ai-driven-gitops-argocd-mcp-server-a8b9fc3a6307" target="_blank" rel="noopener noreferrer"
+           class="fade-up blog-card glow-border rounded-xl p-6 bg-dark-700/50 backdrop-blur-sm block" style="transition-delay: 0.15s;">
+          <div class="flex items-center gap-2 mb-3">
+            <i class="devicon-argocd-plain text-lg text-[#EF7B4D]"></i>
+            <span class="text-xs font-mono text-dark-200">Oct 2025</span>
+          </div>
+          <h3 class="font-bold text-white mb-2">AI Driven GitOps: ArgoCD MCP Server</h3>
+          <p class="text-dark-100 text-sm leading-relaxed">Integrating AI agents with ArgoCD for enhanced GitOps automation</p>
+        </a>
+
+        <a href="https://blog.devops.dev/7-bylaws-to-reduce-docker-build-times-for-more-efficient-deployments-ab2e591367d9" target="_blank" rel="noopener noreferrer"
+           class="fade-up blog-card glow-border rounded-xl p-6 bg-dark-700/50 backdrop-blur-sm block" style="transition-delay: 0.2s;">
+          <div class="flex items-center gap-2 mb-3">
+            <i class="devicon-docker-plain text-lg text-[#2496ED]"></i>
+            <span class="text-xs font-mono text-dark-200">Dec 2024</span>
+          </div>
+          <h3 class="font-bold text-white mb-2">7 Bylaws to Reduce Docker Build Times</h3>
+          <p class="text-dark-100 text-sm leading-relaxed">Optimization with Alpine images, multi-stage builds, and BuildKit caching</p>
+        </a>
+
+        <a href="https://blog.devops.dev/take-flight-with-argo-cd-elevate-strategize-deployments-with-canary-aed9452f7f74" target="_blank" rel="noopener noreferrer"
+           class="fade-up blog-card glow-border rounded-xl p-6 bg-dark-700/50 backdrop-blur-sm block" style="transition-delay: 0.25s;">
+          <div class="flex items-center gap-2 mb-3">
+            <i class="devicon-argocd-plain text-lg text-[#EF7B4D]"></i>
+            <span class="text-xs font-mono text-dark-200">Sep 2024</span>
+          </div>
+          <h3 class="font-bold text-white mb-2">Take Flight with Argo CD: Canary Deployments</h3>
+          <p class="text-dark-100 text-sm leading-relaxed">Implementing canary strategies with Argo Rollouts for zero-downtime releases</p>
+        </a>
+
+        <a href="https://blog.devops.dev/pagerduty-as-code-automate-integrate-and-elevate-incident-management-4745dcd3c114" target="_blank" rel="noopener noreferrer"
+           class="fade-up blog-card glow-border rounded-xl p-6 bg-dark-700/50 backdrop-blur-sm block" style="transition-delay: 0.3s;">
+          <div class="flex items-center gap-2 mb-3">
+            <i class="devicon-terraform-plain text-lg text-[#7B42BC]"></i>
+            <span class="text-xs font-mono text-dark-200">Sep 2024</span>
+          </div>
+          <h3 class="font-bold text-white mb-2">PagerDuty as Code</h3>
+          <p class="text-dark-100 text-sm leading-relaxed">Automating incident management with Terraform IaC approach</p>
+        </a>
+      </div>
+
+      <div class="fade-up text-center mt-10" style="transition-delay: 0.35s;">
+        <a href="https://medium.com/@chathushkarodrigo" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center gap-2 text-accent hover:text-accent-light font-medium transition-colors">
+          View all posts on Medium
+          <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Education Section -->
+  <section id="education" class="py-24 px-6">
+    <div class="max-w-4xl mx-auto">
+      <div class="fade-up">
+        <p class="font-mono text-accent text-sm mb-2 tracking-wider">$ git log --oneline education/</p>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-12">Education</h2>
+      </div>
+      <div class="fade-up glow-border rounded-xl p-6 sm:p-8 bg-dark-700/50 backdrop-blur-sm" style="transition-delay: 0.1s;">
+        <div class="flex flex-col sm:flex-row sm:items-start gap-6">
+          <img src="https://cdn.curtin.edu.au/wp-content/uploads/2023/03/curtin-logo.svg" alt="Curtin University" class="w-16 h-16 rounded-xl object-contain bg-white/10 p-2 shrink-0"
+               onerror="this.outerHTML='<div class=\'w-16 h-16 rounded-xl bg-yellow-500/20 flex items-center justify-center shrink-0\'><span class=\'text-yellow-400 font-bold text-xl font-mono\'>CU</span></div>';" />
+          <div>
+            <h3 class="text-xl font-bold text-white mb-1">Curtin University</h3>
+            <p class="text-accent font-medium mb-1">Software Engineering</p>
+            <p class="text-dark-200 text-sm mb-4">Colombo, Sri Lanka</p>
+            <div class="space-y-2 text-sm text-dark-100">
+              <p><span class="text-dark-50 font-medium">Coursework:</span> Algorithm & Data Structures, Java, Linux, Cloud, Operating Systems, Network</p>
+              <p><span class="text-dark-50 font-medium">EE Coursework:</span> Cloud Solutions, Human-Computer Interaction Design, Embedded Systems</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-24 px-6">
+    <div class="max-w-4xl mx-auto text-center">
+      <div class="fade-up">
+        <p class="font-mono text-accent text-sm mb-2 tracking-wider">$ ping chathushka</p>
+        <h2 class="text-3xl sm:text-4xl font-bold text-white mb-4">Let's Connect</h2>
+        <p class="text-dark-100 text-lg mb-12 max-w-lg mx-auto">Open to discussing DevOps challenges, cloud architecture, iOS development, or new opportunities.</p>
+      </div>
+      <div class="fade-up flex flex-col sm:flex-row justify-center gap-4" style="transition-delay: 0.1s;">
+        <a href="mailto:chathushkarodrigo@gmail.com"
+           class="inline-flex items-center justify-center gap-3 px-8 py-4 bg-accent hover:bg-accent-dark text-white rounded-xl font-medium text-lg transition-all hover:shadow-lg hover:shadow-accent/25">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+          chathushkarodrigo@gmail.com
+        </a>
+        <a href="https://lk.linkedin.com/in/chathushkarodrigo" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center justify-center gap-3 px-8 py-4 border border-dark-300 hover:border-accent text-white rounded-xl font-medium text-lg transition-all hover:shadow-lg hover:shadow-accent/10">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          LinkedIn
+        </a>
+        <a href="https://github.com/ChathushkaRodrigo" target="_blank" rel="noopener noreferrer"
+           class="inline-flex items-center justify-center gap-3 px-8 py-4 border border-dark-300 hover:border-accent text-white rounded-xl font-medium text-lg transition-all hover:shadow-lg hover:shadow-accent/10">
+          <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+          GitHub
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-8 px-6 border-t border-dark-400/30">
+    <div class="max-w-4xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-sm text-dark-200">
+      <p class="font-mono">
+        <span class="text-accent">$</span> echo "Built with passion & too much coffee"
+      </p>
+      <p class="font-mono text-dark-300">Chathushka Rodrigo &copy; 2025</p>
+    </div>
+  </footer>
+
+  <script>
+    const phrases = [
+      'DevOps Engineer',
+      'Cloud Architect',
+      'iOS/macOS Developer',
+      'CI/CD Enthusiast',
+      'Kubernetes Wrangler',
+      'Infrastructure Automator',
+      'Swift Developer',
+    ];
+    let phraseIndex = 0, charIndex = 0, isDeleting = false;
+    const typedEl = document.getElementById('typed-text');
+    function typeWriter() {
+      const current = phrases[phraseIndex];
+      typedEl.textContent = isDeleting ? current.substring(0, charIndex - 1) : current.substring(0, charIndex + 1);
+      isDeleting ? charIndex-- : charIndex++;
+      let delay = isDeleting ? 40 : 80;
+      if (!isDeleting && charIndex === current.length) { delay = 2000; isDeleting = true; }
+      else if (isDeleting && charIndex === 0) { isDeleting = false; phraseIndex = (phraseIndex + 1) % phrases.length; delay = 500; }
+      setTimeout(typeWriter, delay);
+    }
+    typeWriter();
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => { if (entry.isIntersecting) entry.target.classList.add('visible'); });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+    document.querySelectorAll('.fade-up').forEach((el) => observer.observe(el));
+
+    function createParticles() {
+      const container = document.getElementById('particles');
+      for (let i = 0; i < 20; i++) {
+        const p = document.createElement('div');
+        p.className = 'particle';
+        p.style.left = Math.random() * 100 + '%';
+        p.style.animationDuration = 8 + Math.random() * 12 + 's';
+        p.style.animationDelay = Math.random() * 10 + 's';
+        container.appendChild(p);
+      }
+    }
+    createParticles();
+
+    document.getElementById('menu-toggle').addEventListener('click', () => {
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+    document.querySelectorAll('#mobile-menu a').forEach((link) => {
+      link.addEventListener('click', () => document.getElementById('mobile-menu').classList.add('hidden'));
+    });
+
+    // Theme toggle
+    function updateThemeIcons(isLight) {
+      document.getElementById('theme-icon-light').classList.toggle('hidden', isLight);
+      document.getElementById('theme-icon-dark').classList.toggle('hidden', !isLight);
+      document.getElementById('theme-icon-light-m').classList.toggle('hidden', isLight);
+      document.getElementById('theme-icon-dark-m').classList.toggle('hidden', !isLight);
+    }
+    function toggleTheme() {
+      const isLight = document.documentElement.classList.toggle('light');
+      localStorage.setItem('theme', isLight ? 'light' : 'dark');
+      updateThemeIcons(isLight);
+    }
+    document.getElementById('theme-toggle').addEventListener('click', toggleTheme);
+    document.getElementById('theme-toggle-mobile').addEventListener('click', toggleTheme);
+    // Load saved theme
+    if (localStorage.getItem('theme') === 'light') {
+      document.documentElement.classList.add('light');
+      updateThemeIcons(true);
+    }
+
+    const sections = document.querySelectorAll('section[id]');
+    const navLinks = document.querySelectorAll('.nav-link');
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach((s) => { if (window.scrollY >= s.offsetTop - 100) current = s.getAttribute('id'); });
+      navLinks.forEach((l) => { l.classList.remove('active'); if (l.getAttribute('href') === '#' + current) l.classList.add('active'); });
+    });
+  </script>
+</body>
 </html>
